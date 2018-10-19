@@ -1,12 +1,19 @@
 <template>
   <div class="details">
-    <div class="container">
-      <h1 class="text-primary text-center">
-        {{ title }}
-      </h1>
-      <h3>The product id is :{{this.$route.params.id}}</h3>
-      <p>We should execute a query with this ID for obtains the interested data</p>
+
+    <h1>{{ title }}</h1>
+    <div class="card" style="width: 18rem; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title">{{this.$route.params.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          The product id is: {{this.$route.params.id}}
+        </h6>
+        <p class="card-text">
+          We should execute a query with this ID for obtains the interested data.
+        </p>
+      </div>
     </div>
+
   </div>
 </template>
 
@@ -20,3 +27,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+// @import './assets/style/const.scss';
+</style>

@@ -64,3 +64,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 # REFERENCE GUIDE
 
 *  [Routing](https://medium.freecodecamp.org/how-to-use-routing-in-vue-js-to-create-a-better-user-experience-98d225bbcdd9)
+
+* [CSS - Cosmo based on bootstrap](https://bootswatch.com/cosmo/)
+
+* [CSS - SCSS language](http://sass-lang.com/)

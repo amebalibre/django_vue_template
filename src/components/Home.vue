@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <h1>{{ title }}</h1>
-    <div class="row">
-      <div class="col-md4-col-lg4"
-        v-for="(data, index) in products"
-        :key="index">
-          <h3 @click="goTodetail(data.id)">{{ data.title }}</h3>
-      </div>
+    <div class="container">
+      <h1>{{ title }}</h1>
+
+      <ul class="list-group"
+          v-for="(data, index) in products"
+          :key="index">
+        <li class="list-group-item" @click="goTodetail(data.id, data.title)">{{ data.title }}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -38,17 +39,16 @@ export default {
     }
   },
   methods: {
-    goTodetail (id) {
+    goTodetail (id, title) {
       this.$router.push({
         name: 'details',
-        params: {id: id}
+        params: {id: id, name: title}
       })
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style lang="scss" scoped>
+  // @import './assets/style/const.scss';
 </style>

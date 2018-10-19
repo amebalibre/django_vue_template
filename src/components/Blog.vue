@@ -9,13 +9,12 @@ export default {
   name: 'blog',
   data () {
     return {
-      title: 'SÚPER EN CALIENTE!'
+      title: 'Microblog'
     }
   }
 }
-
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  // @import './assets/style/const.scss';
 </style>
