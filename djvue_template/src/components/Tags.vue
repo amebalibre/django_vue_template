@@ -1,15 +1,16 @@
 <template>
-  <div class="blog">
+  <div class="tags">
     <div class="list-group"
          v-for="(value, index) in tags"
          :key="index">
-      <Tag :name="value.name" :color="value.color"/>
+      <tag :api="value"/>
     </div>
 </div>
 </template>
 
 <script>
 import Tag from '@/components/Tag.vue'
+// import axios from 'axios'
 export default {
   name: 'tags',
   props: {

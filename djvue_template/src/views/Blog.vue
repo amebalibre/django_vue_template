@@ -1,17 +1,16 @@
 <template>
   <div class="blog">
     <h1>{{ title }}</h1>
-    <Tags :tags="tags"/>
+    <post/>
 </div>
 </template>
 
 <script>
-import Tags from '@/components/Tags.vue'
-import axios from 'axios'
+import Post from '@/components/Post.vue'
 export default {
   name: 'Blog',
   components: {
-    Tags
+    Post
   },
   data () {
     return {
@@ -19,12 +18,6 @@ export default {
       title: 'Blog',
       tags: []
     }
-  },
-  mounted() {
-    axios.get('http://127.0.0.1:8000/blog/tags/').then(response => {
-      this.results = response.data
-      this.tags = response.data.results
-    })
   }
 }
 </script>
