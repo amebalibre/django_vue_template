@@ -3,14 +3,13 @@
     <div class="list-group"
          v-for="(value, index) in tags"
          :key="index">
-      <tag :api="value"/>
+      <tag :name="value.name" :color="value.color"/>
     </div>
 </div>
 </template>
 
 <script>
 import Tag from '@/components/Tag.vue'
-// import axios from 'axios'
 export default {
   name: 'tags',
   props: {

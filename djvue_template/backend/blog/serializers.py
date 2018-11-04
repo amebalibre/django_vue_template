@@ -4,7 +4,7 @@ from .models.tag import Tag
 from rest_framework import serializers
 
 
-class TagSerializer(serializers.HyperlinkedModelSerializer):
+class TagSerializer(serializers.ModelSerializer):
     """Tags."""
 
     class Meta:
@@ -14,8 +14,10 @@ class TagSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('name', 'color')
 
 
-class PostSerializer(serializers.HyperlinkedModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     """Posts."""
+
+    tags = TagSerializer(many=True, read_only=True)
 
     class Meta:
         """Meta class."""
